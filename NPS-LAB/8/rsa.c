@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-long int gcd(long int a, long int b) //a>b remember this
+long int gcd(long int a, long int b) 
 {
     if(a == 0)
         return b;
