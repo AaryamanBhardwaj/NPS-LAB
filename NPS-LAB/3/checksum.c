@@ -1,6 +1,6 @@
 #include<stdio.h>
-unsigned fields[10];//see how is it declared
-unsigned short checksum()  // see gallery vid 27 feb on how to operate wireshark
+unsigned fields[10];
+unsigned short checksum()  
 {
     int i;
     int sum=0;
@@ -8,8 +8,8 @@ unsigned short checksum()  // see gallery vid 27 feb on how to operate wireshark
     for(i=0;i<9;i++)
     {
         printf("Field %d\n",i+1);
-        scanf("%x",&fields[i]); //input format is hexadecimal
-        sum=sum+(unsigned short)fields[i]; //see the type in which the value is to be returned
+        scanf("%x",&fields[i]); 
+        sum=sum+(unsigned short)fields[i]; 
         printf("%d\n",sum);
         while(sum>>16)
         sum=(sum&0xFFFF)+(sum>>16);
