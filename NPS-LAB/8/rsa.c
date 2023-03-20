@@ -24,11 +24,11 @@ long int encrypt(char ch, long int n, long int e)
 {
     int i;
     long int temp = ch;
-    for(i = 1; i< e; i++)       //take care of how many times the loop executes
+    for(i = 1; i< e; i++)       
         temp = (temp * ch) % n;
     return temp;
 }
-char decrypt(long int ch, long int n, long int d) //take care of datatypes
+char decrypt(long int ch, long int n, long int d) 
 {
     int i;
     long int temp = ch;
@@ -55,11 +55,11 @@ int main()
     n = p * q;
     phi = (p - 1) * (q - 1);
     do {
-            e = rand() % phi;                   //remember mod phi
+            e = rand() % phi;                   
         } while (gcd(phi, e) != 1);
     do {
             d = rand() % phi;
-        } while (((d * e) % phi) != 1);         //remember mod phi
+        } while (((d * e) % phi) != 1);        
     printf("Two prime numbers (p and q) are: %ld and %ld\n",p,q);
     printf("n(p * q) = %ld\n",p*q);
     printf("(p - 1) * (q - 1) = %ld\n", phi);
