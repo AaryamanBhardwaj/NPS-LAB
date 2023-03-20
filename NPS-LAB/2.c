@@ -84,8 +84,10 @@ void BellmanFord(){
 }
 for(u=0;u<n;u++){
     for(v=0;v<n;v++){
-        if(d[v] > d[u] + A[u][v])
+        if(d[v] > d[u] + A[u][v]){
         printf("Negative Edge");
+        exit(0);
+    }
     }
     }
 }
