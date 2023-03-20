@@ -20,7 +20,7 @@ int main()
 	bind(sockfd , (struct sockaddr*)&serv , sizeof(serv));
 	char *buff = malloc(1024);
 	int len;
-	for(;;)//rememeber iss loop mein "cli" hai parameters mein
+	for(;;)
 	{
 		len = sizeof(cli);
 		recvfrom(sockfd , buff , sizeof(buff) , 0 , (struct sockaddr*)&cli , &len);
