@@ -13,10 +13,9 @@ void func(int sockfd){
     char buff[80];
     for(;;){
          int n=0;
-        printf("to server:\n");
-        while((buff[n++]=getchar())!='\n');  //dont forget \n
+        printf("to server:\n"); //dont forget \n
         send(sockfd,buff,sizeof(buff),0);
-        bzero(buff,sizeof(buff));//does not work correctly without bzero
+        bzero(buff,sizeof(buff));
         recv(sockfd,buff,sizeof(buff),0);
         printf("\nfrom server:%s",buff);
         if(strncmp(buff,"exit",4)==0){
