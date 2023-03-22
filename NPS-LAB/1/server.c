@@ -16,7 +16,7 @@ void func(int sockfd){
         printf("from client:\n");
         recv(sockfd,buff,sizeof(buff),0);
         printf("%s",buff);
-        bzero(buff,sizeof(buff));//apply bzero wherever necesssary
+        bzero(buff,sizeof(buff));
         printf("\nto client:%s",buff);
         while((buff[n++]=getchar())!='\n');
         send(sockfd,buff,sizeof(buff),0);
